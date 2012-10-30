@@ -18,7 +18,6 @@ class TestHandler implements eu\maxschuster\smallrest\HandlerInterface {
     }
 
     public function handle() {
-        
         echo "Get User for id " . $this->service->getKey('user');
     }
 

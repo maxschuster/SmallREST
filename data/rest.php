@@ -2,6 +2,8 @@
 
 require_once '../eu/maxschuster/smallrest/inc.smallrest.php';
 
+use eu\maxschuster\smallrest\SmallRESTService;
+
 class TestHandler implements eu\maxschuster\smallrest\HandlerInterface {
     protected $service;
     
@@ -23,7 +25,7 @@ class TestHandler implements eu\maxschuster\smallrest\HandlerInterface {
 
 }
 
-$rest = new \eu\maxschuster\smallrest\SmallRESTService($_GET['_REWRITE_']);
+$rest = SmallRESTService::init($_GET['_REWRITE_']);
 $testHandler = new TestHandler($rest);
 $rest->registerHandler($testHandler);
 //$rest->removeHandler($testHandler);

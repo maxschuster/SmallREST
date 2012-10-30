@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project version="2.0.0a10" title="">
+  <file path="errormessages/CouldNotHandleRequest.php" hash="f7973d6d50fa4e27f01d1c23d3c43116" package="smallrest">
+    <docblock line="3">
+      <description><![CDATA[This file contains the error message "CouldNotHandleRequest".]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="3" name="author" description="Max Schuster &lt;dev@maxschuster.eu&gt;"/>
+      <tag line="3" name="license" description="http://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0"/>
+      <tag line="3" name="package" description="smallrest"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="eu\maxschuster\smallrest\errormessages" line="33" package="smallrest">
+      <extends>\eu\maxschuster\smallrest\errormessages\ErrorMessage</extends>
+      <name>CouldNotHandleRequest</name>
+      <full_name>\eu\maxschuster\smallrest\errormessages\CouldNotHandleRequest</full_name>
+      <docblock line="28">
+        <description><![CDATA[Description of CouldNotHandleRequest]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="28" name="author" description="Max Schuster &lt;dev@maxschuster.eu&gt;"/>
+        <tag line="28" name="package" description="smallrest"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\smallrest\errormessages" line="41" package="smallrest">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="35">
+          <description><![CDATA[ErrorMessage constructor]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="35" name="param" description="[optional]" type="string" variable="$message">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="35" name="param" description="[optional]" type="string" variable="$title">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="35" name="param" description="[optional]" type="int" variable="$statusCode">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+        <argument line="41">
+          <name>$message</name>
+          <default><![CDATA['This REST Server does not offer the requested service!']]></default>
+          <type/>
+        </argument>
+        <argument line="41">
+          <name>$title</name>
+          <default><![CDATA['Error 400: Bad Request']]></default>
+          <type/>
+        </argument>
+        <argument line="41">
+          <name>$statusCode</name>
+          <default><![CDATA[400]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="errormessages/ErrorMessage.php" hash="6a1e17239b5966cb4dd64802919541ef" package="smallrest">
+    <docblock line="3">
+      <description><![CDATA[This file contains the error message "ErrorMessage" which is the basic error
+message for SmallREST.]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="3" name="author" description="Max Schuster &lt;dev@maxschuster.eu&gt;"/>
+      <tag line="3" name="license" description="http://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0"/>
+      <tag line="3" name="package" description="smallrest"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="eu\maxschuster\smallrest\errormessages" line="34" package="smallrest">
+      <extends/>
+      <name>ErrorMessage</name>
+      <full_name>\eu\maxschuster\smallrest\errormessages\ErrorMessage</full_name>
+      <docblock line="29">
+        <description><![CDATA[The basic error message for SmallREST.]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="29" name="author" description="Max Schuster &lt;dev@maxschuster.eu&gt;"/>
+        <tag line="29" name="package" description="smallrest"/>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="39" namespace="eu\maxschuster\smallrest\errormessages" package="Default">
+        <name>$message</name>
+        <default><![CDATA[]]></default>
+        <docblock line="35">
+          <description><![CDATA[Message]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="35" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="45" namespace="eu\maxschuster\smallrest\errormessages" package="Default">
+        <name>$statusCode</name>
+        <default><![CDATA[]]></default>
+        <docblock line="41">
+          <description><![CDATA[HTTP Status code]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="41" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="51" namespace="eu\maxschuster\smallrest\errormessages" package="Default">
+        <name>$title</name>
+        <default><![CDATA[]]></default>
+        <docblock line="47">
+          <description><![CDATA[Message title]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="47" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\smallrest\errormessages" line="59" package="smallrest">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="53">
+          <description><![CDATA[ErrorMessage constructor]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="53" name="param" description="[optional]" type="string" variable="$message">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="53" name="param" description="[optional]" type="string" variable="$title">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="53" name="param" description="[optional]" type="int" variable="$statusCode">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+        <argument line="59">
+          <name>$message</name>
+          <default><![CDATA['An unkown REST Server error occured!']]></default>
+          <type/>
+        </argument>
+        <argument line="59">
+          <name>$title</name>
+          <default><![CDATA['Error 500: Internal Server Error']]></default>
+          <type/>
+        </argument>
+        <argument line="59">
+          <name>$statusCode</name>
+          <default><![CDATA[500]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\smallrest\errormessages" line="68" package="smallrest">
+        <name>outputMessage</name>
+        <full_name>outputMessage</full_name>
+        <docblock line="65">
+          <description><![CDATA[Output the message.]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </method>
+    </class>
+  </file>
+  <file path="exceptions/NoResponsibleHandlerFoundException.php" hash="31feee88eb04b5946be8652229851fe6" package="smallrest">
+    <docblock line="3">
+      <description><![CDATA[This file contains the exception "NoResponsibleHandlerFoundException".]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="3" name="author" description="Max Schuster &lt;dev@maxschuster.eu&gt;"/>
+      <tag line="3" name="license" description="http://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0"/>
+      <tag line="3" name="package" description="smallrest"/>
+    </docblock>
+    <namespace-alias name="Exception">Exception</namespace-alias>
+    <class final="false" abstract="false" namespace="eu\maxschuster\smallrest\exceptions" line="36" package="smallrest">
+      <extends>\eu\maxschuster\smallrest\exceptions\SmallRESTServiceException</extends>
+      <name>NoResponsibleHandlerFoundException</name>
+      <full_name>\eu\maxschuster\smallrest\exceptions\NoResponsibleHandlerFoundException</full_name>
+      <docblock line="30">
+        <description><![CDATA[This exception will be thrown if no matching handler was found for the
+requested service.]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="30" name="author" description="Max Schuster &lt;dev@maxschuster.eu&gt;"/>
+        <tag line="30" name="package" description="smallrest"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\smallrest\exceptions" line="44" package="smallrest">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="38">
+          <description><![CDATA[Construct the exception]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="38" name="param" description="[optional]" type="string" variable="$message">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="38" name="param" description="[optional]" type="int" variable="$code">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="38" name="param" description="[optional]" type="\Exception" variable="$previous">
+            <type by_reference="false">\Exception</type>
+          </tag>
+        </docblock>
+        <argument line="44">
+          <name>$message</name>
+          <default><![CDATA['']]></default>
+          <type/>
+        </argument>
+        <argument line="44">
+          <name>$code</name>
+          <default><![CDATA[0]]></default>
+          <type/>
+        </argument>
+        <argument line="44">
+          <name>$previous</name>
+          <default><![CDATA[null]]></default>
+          <type>\Exception</type>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="exceptions/SmallRESTServiceException.php" hash="f1ae975f6ee37f14395da6ffacebac0b" package="smallrest">
+    <docblock line="3">
+      <description><![CDATA[This file contains the exception "SmallRESTServiceException" which is the
+basic exception for SmallREST.]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="3" name="author" description="Max Schuster &lt;dev@maxschuster.eu&gt;"/>
+      <tag line="3" name="license" description="http://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0"/>
+      <tag line="3" name="package" description="smallrest"/>
+    </docblock>
+    <namespace-alias name="Exception">Exception</namespace-alias>
+    <class final="false" abstract="false" namespace="eu\maxschuster\smallrest\exceptions" line="36" package="smallrest">
+      <extends>\Exception</extends>
+      <name>SmallRESTServiceException</name>
+      <full_name>\eu\maxschuster\smallrest\exceptions\SmallRESTServiceException</full_name>
+      <docblock line="31">
+        <description><![CDATA[Basic exception of SmallREST]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="31" name="author" description="Max Schuster &lt;dev@maxschuster.eu&gt;"/>
+        <tag line="31" name="package" description="smallrest"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\smallrest\exceptions" line="44" package="smallrest">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="38">
+          <description><![CDATA[Construct the exception]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="38" name="param" description="[optional]" type="string" variable="$message">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="38" name="param" description="[optional]" type="int" variable="$code">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="38" name="param" description="[optional]" type="\Exception" variable="$previous">
+            <type by_reference="false">\Exception</type>
+          </tag>
+        </docblock>
+        <argument line="44">
+          <name>$message</name>
+          <default><![CDATA['']]></default>
+          <type/>
+        </argument>
+        <argument line="44">
+          <name>$code</name>
+          <default><![CDATA[0]]></default>
+          <type/>
+        </argument>
+        <argument line="44">
+          <name>$previous</name>
+          <default><![CDATA[null]]></default>
+          <type>\Exception</type>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="HandlerInterface.php" hash="6297771ef7c312e44e23e956150697c6" package="smallrest">
+    <docblock line="3">
+      <description><![CDATA[This file contains the interface "HandlerInterface" for all request handlers]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="3" name="author" description="Max Schuster &lt;dev@maxschuster.eu&gt;"/>
+      <tag line="3" name="license" description="http://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0"/>
+      <tag line="3" name="package" description="smallrest"/>
+    </docblock>
+    <interface namespace="eu\maxschuster\smallrest" line="33" package="smallrest">
+      <name>HandlerInterface</name>
+      <full_name>\eu\maxschuster\smallrest\HandlerInterface</full_name>
+      <docblock line="28">
+        <description><![CDATA[Interface for all request handlers]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="28" name="author" description="Max Schuster &lt;dev@maxschuster.eu&gt;"/>
+        <tag line="28" name="package" description="smallrest"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\smallrest" line="39" package="smallrest">
+        <name>handle</name>
+        <full_name>handle</full_name>
+        <docblock line="35">
+          <description><![CDATA[Function that gets triggered if this handler is responsible for the
+current request.]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\smallrest" line="45" package="smallrest">
+        <name>checkResponsibility</name>
+        <full_name>checkResponsibility</full_name>
+        <docblock line="41">
+          <description><![CDATA[Checks if this handler is responsible for the current request]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="41" name="return" description="Is responsible?" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+      </method>
+    </interface>
+  </file>
+  <file path="inc.smallrest.php" hash="fb36431cf4397776f01bc002f413a903" package="smallrest">
+    <docblock line="3">
+      <description><![CDATA[This file includes all necessary files for SmallREST]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="3" name="author" description="Max Schuster &lt;dev@maxschuster.eu&gt;"/>
+      <tag line="3" name="license" description="http://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0"/>
+      <tag line="3" name="package" description="smallrest"/>
+    </docblock>
+    <include line="27" type="Require Once" package="Default">
+      <name>exceptions/SmallRESTServiceException.php</name>
+    </include>
+    <include line="28" type="Require Once" package="Default">
+      <name>exceptions/NoResponsibleHandlerFoundException.php</name>
+    </include>
+    <include line="31" type="Require Once" package="Default">
+      <name>errormessages/ErrorMessage.php</name>
+    </include>
+    <include line="32" type="Require Once" package="Default">
+      <name>errormessages/CouldNotHandleRequest.php</name>
+    </include>
+    <include line="35" type="Require Once" package="Default">
+      <name>SmallRESTService.php</name>
+    </include>
+    <include line="36" type="Require Once" package="Default">
+      <name>HandlerInterface.php</name>
+    </include>
+  </file>
+  <file path="SmallRESTService.php" hash="bce283b565587ae62b6b9280a49f4e99" package="smallrest">
+    <docblock line="2">
+      <description><![CDATA[This file contains SmallRESTs main class "SmallRESTService"]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="2" name="author" description="Max Schuster &lt;dev@maxschuster.eu&gt;"/>
+      <tag line="2" name="license" description="http://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0"/>
+      <tag line="2" name="package" description="smallrest"/>
+    </docblock>
+    <namespace-alias name="NoResponsibleHandlerFoundException">eu\maxschuster\smallrest\exceptions\NoResponsibleHandlerFoundException</namespace-alias>
+    <class final="false" abstract="false" namespace="eu\maxschuster\smallrest" line="36" package="smallrest">
+      <extends/>
+      <name>SmallRESTService</name>
+      <full_name>\eu\maxschuster\smallrest\SmallRESTService</full_name>
+      <docblock line="29">
+        <description><![CDATA[This is the main SINGLETON class of SmallREST.]]></description>
+        <long-description><![CDATA[<p>It reads all data from the given path to
+make it easy readeble for request handlers. Request handlers has to be
+registerd in this class.</p>]]></long-description>
+        <tag line="29" name="author" description="Max Schuster &lt;dev@maxschuster.eu&gt;"/>
+        <tag line="29" name="package" description="smallrest"/>
+      </docblock>
+      <constant namespace="eu\maxschuster\smallrest" line="42" package="smallrest">
+        <name>TYPE_GET</name>
+        <full_name>TYPE_GET</full_name>
+        <value><![CDATA['GET']]></value>
+        <docblock line="38">
+          <description><![CDATA[Request type GET]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="38" name="const" description="TYPE_GET"/>
+        </docblock>
+      </constant>
+      <constant namespace="eu\maxschuster\smallrest" line="48" package="smallrest">
+        <name>TYPE_POST</name>
+        <full_name>TYPE_POST</full_name>
+        <value><![CDATA['POST']]></value>
+        <docblock line="44">
+          <description><![CDATA[Request type POST]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="44" name="const" description="TYPE_POST"/>
+        </docblock>
+      </constant>
+      <constant namespace="eu\maxschuster\smallrest" line="54" package="smallrest">
+        <name>TYPE_PUT</name>
+        <full_name>TYPE_PUT</full_name>
+        <value><![CDATA['PUT']]></value>
+        <docblock line="50">
+          <description><![CDATA[Request type PUT]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="50" name="const" description="TYPE_PUT"/>
+        </docblock>
+      </constant>
+      <constant namespace="eu\maxschuster\smallrest" line="60" package="smallrest">
+        <name>TYPE_DELETE</name>
+        <full_name>TYPE_DELETE</full_name>
+        <value><![CDATA['DELETE']]></value>
+        <docblock line="56">
+          <description><![CDATA[Request type DELETE]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="56" name="const" description="TYPE_DELETE"/>
+        </docblock>
+      </constant>
+      <property final="false" static="true" visibility="private" line="66" namespace="eu\maxschuster\smallrest" package="Default">
+        <name>$_instance</name>
+        <default><![CDATA[]]></default>
+        <docblock line="62">
+          <description><![CDATA[Singleton instance]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="62" name="var" description="" type="\eu\maxschuster\smallrest\SmallRESTService">
+            <type by_reference="false">\eu\maxschuster\smallrest\SmallRESTService</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="72" namespace="eu\maxschuster\smallrest" package="Default">
+        <name>$url</name>
+        <default><![CDATA[]]></default>
+        <docblock line="68">
+          <description><![CDATA[The given rewrite url]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="68" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="78" namespace="eu\maxschuster\smallrest" package="Default">
+        <name>$type</name>
+        <default><![CDATA[]]></default>
+        <docblock line="74">
+          <description><![CDATA[Request type (GET, POST, PUT, DELETE)]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="74" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="85" namespace="eu\maxschuster\smallrest" package="Default">
+        <name>$extension</name>
+        <default><![CDATA[]]></default>
+        <docblock line="80">
+          <description><![CDATA[Requested file extension.]]></description>
+          <long-description><![CDATA[<p>E.g. json, xml, ...</p>]]></long-description>
+          <tag line="80" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="91" namespace="eu\maxschuster\smallrest" package="Default">
+        <name>$pathData</name>
+        <default><![CDATA[]]></default>
+        <docblock line="87">
+          <description><![CDATA[Splited rewrite path as numeric array]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="87" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="97" namespace="eu\maxschuster\smallrest" package="Default">
+        <name>$pathDataCount</name>
+        <default><![CDATA[]]></default>
+        <docblock line="93">
+          <description><![CDATA[Amount of elements inside the pathData array]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="93" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="103" namespace="eu\maxschuster\smallrest" package="Default">
+        <name>$pathDataKeyValue</name>
+        <default><![CDATA[]]></default>
+        <docblock line="99">
+          <description><![CDATA[Path data as assoc array]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="99" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="109" namespace="eu\maxschuster\smallrest" package="Default">
+        <name>$getData</name>
+        <default><![CDATA[]]></default>
+        <docblock line="105">
+          <description><![CDATA[GET data]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="105" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="115" namespace="eu\maxschuster\smallrest" package="Default">
+        <name>$postData</name>
+        <default><![CDATA[]]></default>
+        <docblock line="111">
+          <description><![CDATA[POST data]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="111" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="121" namespace="eu\maxschuster\smallrest" package="Default">
+        <name>$handler</name>
+        <default><![CDATA[array()]]></default>
+        <docblock line="117">
+          <description><![CDATA[Array containing all registerd handlers]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="117" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="eu\maxschuster\smallrest" line="128" package="smallrest">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="123">
+          <description><![CDATA[SmallRESTService contructor.]]></description>
+          <long-description><![CDATA[<p>Sets the url and defaults for type, getData
+and postData.</p>]]></long-description>
+          <tag line="123" name="param" description="Rewrite path" type="string" variable="$url">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="128">
+          <name>$url</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="eu\maxschuster\smallrest" line="140" package="smallrest">
+        <name>init</name>
+        <full_name>init</full_name>
+        <docblock line="135">
+          <description><![CDATA[Initializes the SmallRESTService Singleton instance.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="135" name="param" description="Rewrite path" type="string" variable="$url">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="135" name="return" description="Singleton instance of SmallRESTService" type="\eu\maxschuster\smallrest\SmallRESTService">
+            <type by_reference="false">\eu\maxschuster\smallrest\SmallRESTService</type>
+          </tag>
+        </docblock>
+        <argument line="140">
+          <name>$url</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="eu\maxschuster\smallrest" line="149" package="smallrest">
+        <name>getInstance</name>
+        <full_name>getInstance</full_name>
+        <docblock line="145">
+          <description><![CDATA[Initializes the SmallRESTService Singleton instance.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="145" name="return" description="Singleton instance of SmallRESTService" type="\eu\maxschuster\smallrest\SmallRESTService">
+            <type by_reference="false">\eu\maxschuster\smallrest\SmallRESTService</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\smallrest" line="159" package="smallrest">
+        <name>getUrl</name>
+        <full_name>getUrl</full_name>
+        <docblock line="155">
+          <description><![CDATA[Gets the current rewrite url]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="155" name="return" description="Rewrite url" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\smallrest" line="168" package="smallrest">
+        <name>setUrl</name>
+        <full_name>setUrl</full_name>
+        <docblock line="163">
+          <description><![CDATA[Sets a new rewrite url.]]></description>
+          <long-description><![CDATA[<p>Also the extension, pathData, pathDataCount and
+pathDataKeyValue.</p>]]></long-description>
+          <tag line="163" name="param" description="Rewrite url" type="string" variable="$url">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="168">
+          <name>$url</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\smallrest" line="200" package="smallrest">
+        <name>getType</name>
+        <full_name>getType</full_name>
+        <docblock line="196">
+          <description><![CDATA[Gets the current request type]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="196" name="return" description="Request type" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\smallrest" line="208" package="smallrest">
+        <name>setType</name>
+        <full_name>setType</full_name>
+        <docblock line="204">
+          <description><![CDATA[Sets a new request type]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="204" name="param" description="Request type" type="string" variable="$type">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="208">
+          <name>$type</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\smallrest" line="216" package="smallrest">
+        <name>getExtension</name>
+        <full_name>getExtension</full_name>
+        <docblock line="212">
+          <description><![CDATA[Gets the current requested file extension]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="212" name="return" description="Requested file extension" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\smallrest" line="224" package="smallrest">
+        <name>setExtension</name>
+        <full_name>setExtension</full_name>
+        <docblock line="220">
+          <description><![CDATA[Sets a new requested file extension]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="220" name="param" description="Requested file extension" type="string" variable="$extension">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="224">
+          <name>$extension</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\smallrest" line="232" package="smallrest">
+        <name>getGetData</name>
+        <full_name>getGetData</full_name>
+        <docblock line="228">
+          <description><![CDATA[Gets the current GET data]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="228" name="return" description="GET data" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\smallrest" line="240" package="smallrest">
+        <name>setGetData</name>
+        <full_name>setGetData</full_name>
+        <docblock line="236">
+          <description><![CDATA[Sets a new array as GET data]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="236" name="param" description="GET data" type="array" variable="$getData">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="240">
+          <name>$getData</name>
+          <default><![CDATA[]]></default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\smallrest" line="248" package="smallrest">
+        <name>getPostData</name>
+        <full_name>getPostData</full_name>
+        <docblock line="244">
+          <description><![CDATA[Gets the current GET data]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="244" name="return" description="GET data" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\smallrest" line="256" package="smallrest">
+        <name>setPostData</name>
+        <full_name>setPostData</full_name>
+        <docblock line="252">
+          <description><![CDATA[Sets a new array as POST data]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="252" name="param" description="POST data" type="array" variable="$postData">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="256">
+          <name>$postData</name>
+          <default><![CDATA[]]></default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\smallrest" line="265" package="smallrest">
+        <name>getKey</name>
+        <full_name>getKey</full_name>
+        <docblock line="260">
+          <description><![CDATA[Gets the value of the given key from the pathDataKeyValue array]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="260" name="param" description="Key to search" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="260" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="265">
+          <name>$key</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\smallrest" line="276" package="smallrest">
+        <name>getKeys</name>
+        <full_name>getKeys</full_name>
+        <docblock line="272">
+          <description><![CDATA[Gets a list of all available keys from the pathDataKeyValue array]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="272" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\smallrest" line="284" package="smallrest">
+        <name>getPathDataCount</name>
+        <full_name>getPathDataCount</full_name>
+        <docblock line="280">
+          <description><![CDATA[Gets the current amount of elements inside the pathData array]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="280" name="return" description="Amount of elements" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\smallrest" line="293" package="smallrest">
+        <name>getIndex</name>
+        <full_name>getIndex</full_name>
+        <docblock line="288">
+          <description><![CDATA[Gets the value for the given index from the pathData array]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="288" name="param" description="Requested index" type="int" variable="$index">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="288" name="return" description="Value of index" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="293">
+          <name>$index</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\smallrest" line="304" package="smallrest">
+        <name>registerHandler</name>
+        <full_name>registerHandler</full_name>
+        <docblock line="300">
+          <description><![CDATA[Register a new request handler to the request list]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="300" name="param" description="Request handler" type="\eu\maxschuster\smallrest\HandlerInterface" variable="$handler">
+            <type by_reference="false">\eu\maxschuster\smallrest\HandlerInterface</type>
+          </tag>
+        </docblock>
+        <argument line="304">
+          <name>$handler</name>
+          <default><![CDATA[]]></default>
+          <type>\eu\maxschuster\smallrest\HandlerInterface</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\smallrest" line="313" package="smallrest">
+        <name>removeHandler</name>
+        <full_name>removeHandler</full_name>
+        <docblock line="308">
+          <description><![CDATA[Removes the given request handler from the request list]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="308" name="param" description="Request handler" type="\eu\maxschuster\smallrest\HandlerInterface" variable="$handler">
+            <type by_reference="false">\eu\maxschuster\smallrest\HandlerInterface</type>
+          </tag>
+          <tag line="308" name="return" description="A handler has been removed" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="313">
+          <name>$handler</name>
+          <default><![CDATA[]]></default>
+          <type>\eu\maxschuster\smallrest\HandlerInterface</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\smallrest" line="328" package="smallrest">
+        <name>handle</name>
+        <full_name>handle</full_name>
+        <docblock line="322">
+          <description><![CDATA[Searches the right handler for the request.]]></description>
+          <long-description><![CDATA[<p>It also echos an error
+message if something went wrong.</p>]]></long-description>
+          <tag line="322" name="return" description="Nothing..." type="void">
+            <type by_reference="false">void</type>
+          </tag>
+          <tag line="322" name="throws" description="" type="\eu\maxschuster\smallrest\exceptions\NoResponsibleHandlerFoundException">
+            <type by_reference="false">\eu\maxschuster\smallrest\exceptions\NoResponsibleHandlerFoundException</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <package name="smallrest" full_name="smallrest"/>
+  <namespace name="eu" full_name="eu">
+    <namespace name="maxschuster" full_name="eu\maxschuster">
+      <namespace name="smallrest" full_name="eu\maxschuster\smallrest">
+        <namespace name="errormessages" full_name="eu\maxschuster\smallrest\errormessages"/>
+        <namespace name="exceptions" full_name="eu\maxschuster\smallrest\exceptions"/>
+      </namespace>
+    </namespace>
+  </namespace>
+  <marker count="0">todo</marker>
+  <marker count="0">fixme</marker>
+  <deprecated count="0"/>
+</project>

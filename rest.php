@@ -11,7 +11,10 @@ class TestHandler implements eu\maxschuster\smallrest\HandlerInterface {
 
     
     public function checkResponsibility() {
-        return true;
+        if ($this->service->getIndex(0) == 'user') {
+            return true;
+        }
+        return false;
     }
 
     public function handle() {
@@ -24,10 +27,6 @@ $rest = new \eu\maxschuster\smallrest\SmallRESTService($_GET['_REWRITE_']);
 $testHandler = new TestHandler($rest);
 $rest->registerHandler($testHandler);
 //$rest->removeHandler($testHandler);
+$rest->handle();
 
-try {
-    $rest->handle();
-} catch (\eu\maxschuster\smallrest\NoResponsibleHandlerFoundException $re) {
-    http_response_code(400);
-}
 ?>

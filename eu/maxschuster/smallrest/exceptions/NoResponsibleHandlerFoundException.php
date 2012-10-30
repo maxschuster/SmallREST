@@ -1,19 +1,19 @@
 <?php
 
-namespace eu\maxschuster\smallrest;
+namespace eu\maxschuster\smallrest\exceptions;
 
 use \Exception;
 
 /**
- * Description of RESTServiceException
+ * Description of NoResponsibleHandlerFoundException
  *
  * @author mschuster
  */
-class SmallRESTServiceException extends Exception {
+class NoResponsibleHandlerFoundException extends SmallRESTServiceException {
     
     public function __construct($message = '', $code = 0, Exception $previous = null) {
         if (!empty($message)) {
-            $message = 'An unknowen RESTService Error occured!';
+            $message = 'No responsible handler found!';
         }
         parent::__construct($message, $code, $previous);
     }

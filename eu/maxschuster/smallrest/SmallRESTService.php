@@ -2,6 +2,8 @@
 
 namespace eu\maxschuster\smallrest;
 
+use eu\maxschuster\smallrest\exceptions\NoResponsibleHandlerFoundException;
+
 /**
  * Description of RESTService
  *
@@ -107,13 +109,21 @@ class SmallRESTService {
     }
     
     public function handle() {
-        foreach ($this->handler as $handler) {
-            if ($handler->checkResponsibility()) {
-                $handler->handle();
-                return;
+        $message = null;
+        try {
+            foreach ($this->handler as $handler) {
+                if ($handler->checkResponsibility()) {
+                    $handler->handle();
+                    return;
+                }
             }
+            throw new NoResponsibleHandlerFoundException();
+        } catch (NoResponsibleHandlerFoundException $re) {
+            $message = new errormessages\CouldNotHandleRequest();
+        } catch (\Exception $e) {
+            $message = new errormessages\ErrorMessage();
         }
-        throw new NoResponsibleHandlerFoundException();
+        $message->outputMessage();
     }
     
 }

@@ -1,6 +1,6 @@
 <?php
 
-require_once 'eu/maxschuster/smallrest/inc.smallrest.php';
+require_once '../eu/maxschuster/smallrest/inc.smallrest.php';
 
 class TestHandler implements eu\maxschuster\smallrest\HandlerInterface {
     protected $service;
@@ -18,7 +18,8 @@ class TestHandler implements eu\maxschuster\smallrest\HandlerInterface {
     }
 
     public function handle() {
-        echo "Isch Händel dat!";
+        
+        echo "Get User for id " . $this->service->getKey('user');
     }
 
 }

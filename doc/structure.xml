@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<project version="2.0.0a10" title="">
+<project version="2.0.0a10" title="SmallREST">
   <file path="errormessages/CouldNotHandleRequest.php" hash="f7973d6d50fa4e27f01d1c23d3c43116" package="smallrest">
     <docblock line="3">
       <description><![CDATA[This file contains the error message "CouldNotHandleRequest".]]></description>

@@ -1,7 +1,7 @@
 <?php
 
-require_once '../eu/maxschuster/smallrest/inc.smallrest.php';
-
+//require_once '../eu/maxschuster/smallrest/inc.smallrest.php';
+require_once 'smallrest.phar';
 use eu\maxschuster\smallrest\SmallRESTService;
 
 class TestHandler implements eu\maxschuster\smallrest\HandlerInterface {
@@ -28,7 +28,6 @@ class TestHandler implements eu\maxschuster\smallrest\HandlerInterface {
 $rest = SmallRESTService::init($_GET['_REWRITE_']);
 $testHandler = new TestHandler($rest);
 $rest->registerHandler($testHandler);
-//$rest->removeHandler($testHandler);
 $rest->handle();
 
 ?>

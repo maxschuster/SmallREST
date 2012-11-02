@@ -32,8 +32,11 @@ require_once 'errormessages/ErrorMessage.php';
 require_once 'errormessages/CouldNotHandleRequest.php';
 
 // Classes conaining the logic
-require_once 'SmallRESTService.php';
 require_once 'HandlerInterface.php';
+require_once 'HandlerAbstract.php';
+require_once 'SmallRESTService.php';
+
+
 
 
 ?>

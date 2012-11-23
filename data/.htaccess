@@ -4,4 +4,4 @@ RewriteEngine On
 # Send everything inside this folder
 # to the rest.php as GET parameter _REWRITE_
 # and also keep other GET parameters
-RewriteRule ^(.*)$ rest.php?_REWRITE_=$1 [L,QSA]
+RewriteRule ^(.*)$ rest.php?_REWRITE_=$1 [L,QSA,PT]

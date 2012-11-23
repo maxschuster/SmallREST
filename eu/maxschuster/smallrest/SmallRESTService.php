@@ -174,7 +174,7 @@ class SmallRESTService {
             $this->extension = null;
         }
         $this->pathData = array();
-        if (!empty($pathInfo['dirname'])) {
+        if (!empty($pathInfo['dirname']) && $pathInfo['dirname'] != '.') {
             $this->pathData = array_merge($this->pathData, explode('/', $pathInfo['dirname']));
         }
         if (!empty($pathInfo['filename'])) {
@@ -234,6 +234,15 @@ class SmallRESTService {
     }
     
     /**
+     * Gets the given key from the get data
+     * @param string $key Name of the key to get
+     * @return mixed Key content or null
+     */
+    public function getGetKey($key) {
+        return empty($this->getData[$key]) ? null : $this->getData[$key];
+    }
+    
+    /**
      * Sets a new array as GET data
      * @param array $getData GET data
      */
@@ -242,11 +251,20 @@ class SmallRESTService {
     }
 
     /**
-     * Gets the current GET data
-     * @return array GET data
+     * Gets the current POST data
+     * @return array POST data
      */
     public function getPostData() {
         return $this->postData;
+    }
+    
+    /**
+     * Gets the given key from the post data
+     * @param string $key Name of the key to get
+     * @return mixed Key content or null
+     */
+    public function getPostKey($key) {
+        return empty($this->postData[$key]) ? null : $this->postData[$key];
     }
     
     /**

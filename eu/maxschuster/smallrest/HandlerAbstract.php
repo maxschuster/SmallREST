@@ -28,13 +28,13 @@ abstract class HandlerAbstract implements HandlerInterface {
         echo json_encode($result);
     }
     
-    abstract public function create();
+    abstract protected function create();
 
-    abstract public function delete();
+    abstract protected function delete();
 
-    abstract public function get();
+    abstract protected function get();
 
-    abstract public function update();
+    abstract protected function update();
     
 }
 
